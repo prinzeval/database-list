@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Scraping To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .todo-list {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .todo-section {
+            margin-bottom: 20px;
+        }
+        .todo-section h2 {
+            margin: 0;
+        }
+        .page-list {
+            margin-left: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .page-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .page-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .page-item label {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie Scraping To-Do List</h1>
+    <div class="todo-list" id="todo-list">
+
+        <!-- Alphabet A -->
+        <div class="todo-section" id="section-a">
+            <h2>Scrape Alphabet A - Pages</h2>
+            <div class="page-list" id="list-a"></div>
+            <button onclick="loadMore('a')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet B -->
+        <div class="todo-section" id="section-b">
+            <h2>Scrape Alphabet B - Pages</h2>
+            <div class="page-list" id="list-b"></div>
+            <button onclick="loadMore('b')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet C -->
+        <div class="todo-section" id="section-c">
+            <h2>Scrape Alphabet C - Pages</h2>
+            <div class="page-list" id="list-c"></div>
+            <button onclick="loadMore('c')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet D -->
+        <div class="todo-section" id="section-d">
+            <h2>Scrape Alphabet D - Pages</h2>
+            <div class="page-list" id="list-d"></div>
+            <button onclick="loadMore('d')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet E -->
+        <div class="todo-section" id="section-e">
+            <h2>Scrape Alphabet E - Pages</h2>
+            <div class="page-list" id="list-e"></div>
+            <button onclick="loadMore('e')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet F -->
+        <div class="todo-section" id="section-f">
+            <h2>Scrape Alphabet F - Pages</h2>
+            <div class="page-list" id="list-f"></div>
+            <button onclick="loadMore('f')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet G -->
+        <div class="todo-section" id="section-g">
+            <h2>Scrape Alphabet G - Pages</h2>
+            <div class="page-list" id="list-g"></div>
+            <button onclick="loadMore('g')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet H -->
+        <div class="todo-section" id="section-h">
+            <h2>Scrape Alphabet H - Pages</h2>
+            <div class="page-list" id="list-h"></div>
+            <button onclick="loadMore('h')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet I -->
+        <div class="todo-section" id="section-i">
+            <h2>Scrape Alphabet I - Pages</h2>
+            <div class="page-list" id="list-i"></div>
+            <button onclick="loadMore('i')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet J -->
+        <div class="todo-section" id="section-j">
+            <h2>Scrape Alphabet J - Pages</h2>
+            <div class="page-list" id="list-j"></div>
+            <button onclick="loadMore('j')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet K -->
+        <div class="todo-section" id="section-k">
+            <h2>Scrape Alphabet K - Pages</h2>
+            <div class="page-list" id="list-k"></div>
+            <button onclick="loadMore('k')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet L -->
+        <div class="todo-section" id="section-l">
+            <h2>Scrape Alphabet L - Pages</h2>
+            <div class="page-list" id="list-l"></div>
+            <button onclick="loadMore('l')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet M -->
+        <div class="todo-section" id="section-m">
+            <h2>Scrape Alphabet M - Pages</h2>
+            <div class="page-list" id="list-m"></div>
+            <button onclick="loadMore('m')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet N -->
+        <div class="todo-section" id="section-n">
+            <h2>Scrape Alphabet N - Pages</h2>
+            <div class="page-list" id="list-n"></div>
+            <button onclick="loadMore('n')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet O -->
+        <div class="todo-section" id="section-o">
+            <h2>Scrape Alphabet O - Pages</h2>
+            <div class="page-list" id="list-o"></div>
+            <button onclick="loadMore('o')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet P -->
+        <div class="todo-section" id="section-p">
+            <h2>Scrape Alphabet P - Pages</h2>
+            <div class="page-list" id="list-p"></div>
+            <button onclick="loadMore('p')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet Q -->
+        <div class="todo-section" id="section-q">
+            <h2>Scrape Alphabet Q - Pages</h2>
+            <div class="page-list" id="list-q"></div>
+            <button onclick="loadMore('q')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet R -->
+        <div class="todo-section" id="section-r">
+            <h2>Scrape Alphabet R - Pages</h2>
+            <div class="page-list" id="list-r"></div>
+            <button onclick="loadMore('r')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet S -->
+        <div class="todo-section" id="section-s">
+            <h2>Scrape Alphabet S - Pages</h2>
+            <div class="page-list" id="list-s"></div>
+            <button onclick="loadMore('s')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet T -->
+        <div class="todo-section" id="section-t">
+            <h2>Scrape Alphabet T - Pages</h2>
+            <div class="page-list" id="list-t"></div>
+            <button onclick="loadMore('t')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet U -->
+        <div class="todo-section" id="section-u">
+            <h2>Scrape Alphabet U - Pages</h2>
+            <div class="page-list" id="list-u"></div>
+            <button onclick="loadMore('u')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet V -->
+        <div class="todo-section" id="section-v">
+            <h2>Scrape Alphabet V - Pages</h2>
+            <div class="page-list" id="list-v"></div>
+            <button onclick="loadMore('v')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet W -->
+        <div class="todo-section" id="section-w">
+            <h2>Scrape Alphabet W - Pages</h2>
+            <div class="page-list" id="list-w"></div>
+            <button onclick="loadMore('w')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet X -->
+        <div class="todo-section" id="section-x">
+            <h2>Scrape Alphabet X - Pages</h2>
+            <div class="page-list" id="list-x"></div>
+            <button onclick="loadMore('x')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet Y -->
+        <div class="todo-section" id="section-y">
+            <h2>Scrape Alphabet Y - Pages</h2>
+            <div class="page-list" id="list-y"></div>
+            <button onclick="loadMore('y')">Load More Pages</button>
+        </div>
+
+        <!-- Alphabet Z -->
+        <div class="todo-section" id="section-z">
+            <h2>Scrape Alphabet Z - Pages</h2>
+            <div class="page-list" id="list-z"></div>
+            <button onclick="loadMore('z')">Load More Pages</button>
+        </div>
+
+    </div>
+
+    <script>
+        // Number of pages for each alphabet
+        const pages = {
+            a: 275,
+            b: 6,
+            c: 6,
+            d: 12,
+            e: 8,
+            f: 5,
+            g: 5,
+            h: 4,
+            i: 65,
+            j: 4,
+            k: 5,
+            l: 6,
+            m: 13,
+            n: 5,
+            o: 11,
+            p: 5,
+            q: 2,
+            r: 5,
+            s: 255,
+            t: 31,
+            u: 6,
+            v: 5,
+            w: 3,
+            x: 14,
+            y: 3,
+            z: 8
+        };
+
+        // Function to load more pages for a given alphabet
+        function loadMore(alphabet) {
+            const list = document.getElementById(`list-${alphabet}`);
+            const totalPages = pages[alphabet];
+            const loadedPages = list.children.length;
+            const pagesToLoad = Math.min(50, totalPages - loadedPages); // Load 50 pages at a time or less if fewer pages remain
+
+            for (let i = loadedPages; i < loadedPages + pagesToLoad; i++) {
+                const pageItem = document.createElement('div');
+                pageItem.className = 'page-item';
+                const checkboxId = `${alphabet}-page${i + 1}`;
+                pageItem.innerHTML = `
+                    <input type="checkbox" id="${checkboxId}" ${isChecked(alphabet, i + 1) ? 'checked' : ''}>
+                    <label for="${checkboxId}">Page ${i + 1}</label>
+                `;
+                list.appendChild(pageItem);
+            }
+
+            if (loadedPages + pagesToLoad >= totalPages) {
+                document.querySelector(`#section-${alphabet} button`).disabled = true;
+                document.querySelector(`#section-${alphabet} button`).textContent = 'All pages loaded';
+            }
+        }
+
+        // Check if the page is checked in localStorage
+        function isChecked(alphabet, page) {
+            return localStorage.getItem(`${alphabet}-page${page}`) === 'true';
+        }
+
+        // Save the checkbox state to localStorage
+        function saveState(event) {
+            const checkbox = event.target;
+            localStorage.setItem(checkbox.id, checkbox.checked);
+        }
+
+        // Initialize the page by loading the first set of pages for each alphabet
+        Object.keys(pages).forEach(alphabet => loadMore(alphabet));
+
+        // Add event listeners to all checkboxes to save their state
+        document.addEventListener('change', event => {
+            if (event.target.type === 'checkbox') {
+                saveState(event);
+            }
+        });
+    </script>
+</body>
+</html>
